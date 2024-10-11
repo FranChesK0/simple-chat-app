@@ -45,11 +45,11 @@ line_length = 90
 length_sort = true
 multi_line_output = 3
 include_trailing_comma = true
-src_paths = ["project_name", "tests"]
+src_paths = ["simple-chat-app", "tests"]
 extend_skip = ["__init__.py"]
 
 [tool.mypy]
-mypy_path = "project_name"
+mypy_path = "simple-chat-app"
 python_version = "3.12"
 explicit_package_bases = true
 disallow_untyped_defs = true
