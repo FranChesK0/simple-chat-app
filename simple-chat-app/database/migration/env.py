@@ -1,6 +1,4 @@
-import sys
 import asyncio
-from os.path import abspath, dirname
 from logging.config import fileConfig
 
 from alembic import context
@@ -12,7 +10,6 @@ from chat import Message  # noqa: F401
 from user import User  # noqa: F401
 from database import DB_URL, Base
 
-sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
