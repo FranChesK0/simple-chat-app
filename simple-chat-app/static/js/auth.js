@@ -64,8 +64,8 @@ document.getElementById('register-button').addEventListener('click', async (even
 
     const email = document.querySelector('#register-form input[type="email"]').value;
     const name = document.querySelector('#register-form input[type="text"]').value;
-    const password = document.querySelector('#register-form input[type="password"]')[0].value;
-    const password_check = document.querySelector('#register-form input[type="password"]')[1].value;
+    const password = document.querySelectorAll('#register-form input[type="password"]')[0].value;
+    const password_check = document.querySelectorAll('#register-form input[type="password"]')[1].value;
 
     if (password !== password_check) {
         alert('Passwords mismatched');
