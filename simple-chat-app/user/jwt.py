@@ -17,7 +17,7 @@ from .exceptions import (
 
 
 def get_token(request: Request) -> str:
-    token = request.cookies.get("user_access_token")
+    token = request.cookies.get("users_access_token")
     if not token:
         raise TokenNotFoundException
     return token
