@@ -1,3 +1,4 @@
-from .database import Base, DB_URL, async_session_maker
+from .database import Base, DB_URL
+from .dao import BaseDAO
 
-__all__ = ["Base", "DB_URL", "async_session_maker"]
+__all__ = ["Base", "DB_URL", "BaseDAO"]
