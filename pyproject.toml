@@ -28,6 +28,8 @@ flake8-pyproject = "^1.2.3"
 isort = "^5.13.2"
 mypy = "^1.11.2"
 pre-commit = "^4.0.1"
+types-python-jose = "^3.3.4.20240106"
+types-passlib = "^1.7.7.20240819"
 
 
 [tool.black]
