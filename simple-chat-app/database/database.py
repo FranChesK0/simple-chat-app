@@ -1,3 +1,4 @@
+from typing import Final
 from datetime import datetime
 
 from sqlalchemy import func
@@ -9,9 +10,11 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
 )
 
-db_url = "sqlite+aiosqlite://db.sqlite3"
-engine = create_async_engine(url=db_url)
-async_session_maker = async_sessionmaker(engine, class_=AsyncSession)
+DB_URL: Final[str] = "sqlite+aiosqlite://db.sqlite3"
+engine = create_async_engine(url=DB_URL)
+async_session_maker: Final[async_sessionmaker] = async_sessionmaker(
+    engine, class_=AsyncSession
+)
 
 
 class Base(AsyncAttrs, DeclarativeBase):
