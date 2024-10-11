@@ -1,4 +1,4 @@
-from typing import Any, Dict
+from typing import Any
 
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.future import select
@@ -10,7 +10,7 @@ class BaseDAO:
     model: Any = Base
 
     @classmethod
-    async def find_all(cls, **filter_by: Dict[str, Any]) -> Any:
+    async def find_all(cls, **filter_by: Any) -> Any:
         async with async_session_maker() as session:
             query = select(cls.model).filter_by(**filter_by)
             result = await session.execute(query)
@@ -24,14 +24,14 @@ class BaseDAO:
             return result.scalar_one_or_none()
 
     @classmethod
-    async def find_by(cls, **filter_by: Dict[str, Any]) -> Any:
+    async def find_by(cls, **filter_by: Any) -> Any:
         async with async_session_maker() as session:
             query = select(cls.model).filter_by(**filter_by)
             result = await session.execute(query)
             return result.scalar_one_or_none()
 
     @classmethod
-    async def add(cls, **values: Dict[str, Any]) -> Any:
+    async def add(cls, **values: Any) -> Any:
         async with async_session_maker() as session:
             new_instance = cls.model(**values)
             session.add(new_instance)
