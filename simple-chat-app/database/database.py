@@ -10,7 +10,7 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
 )
 
-DB_URL: Final[str] = "sqlite+aiosqlite://db.sqlite3"
+DB_URL: Final[str] = "sqlite+aiosqlite:///db.sqlite3"
 engine = create_async_engine(url=DB_URL)
 async_session_maker: Final[async_sessionmaker] = async_sessionmaker(
     engine, class_=AsyncSession
