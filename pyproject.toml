@@ -8,6 +8,18 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+aiosqlite = "^0.20.0"
+alembic = "^1.13.3"
+bcrypt = "^4.2.0"
+fastapi = "^0.115.0"
+jinja2 = "^3.1.4"
+passlib = "^1.7.4"
+pydantic = {extras = ["email"], version = "^2.9.2"}
+pydantic-settings = "^2.5.2"
+python-jose = "^3.3.0"
+sqlalchemy = "^2.0.35"
+uvicorn = "^0.31.1"
+websockets = "^13.1"
 
 
 [tool.poetry.group.dev.dependencies]
