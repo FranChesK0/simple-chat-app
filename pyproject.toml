@@ -8,6 +8,18 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+aiosqlite = "^0.20.0"
+alembic = "^1.13.3"
+bcrypt = "^4.2.0"
+fastapi = "^0.115.0"
+jinja2 = "^3.1.4"
+passlib = "^1.7.4"
+pydantic = {extras = ["email"], version = "^2.9.2"}
+pydantic-settings = "^2.5.2"
+python-jose = "^3.3.0"
+sqlalchemy = "^2.0.35"
+uvicorn = "^0.31.1"
+websockets = "^13.1"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -16,6 +28,8 @@ flake8-pyproject = "^1.2.3"
 isort = "^5.13.2"
 mypy = "^1.11.2"
 pre-commit = "^4.0.1"
+types-python-jose = "^3.3.4.20240106"
+types-passlib = "^1.7.7.20240819"
 
 
 [tool.black]
@@ -33,11 +47,11 @@ line_length = 90
 length_sort = true
 multi_line_output = 3
 include_trailing_comma = true
-src_paths = ["project_name", "tests"]
+src_paths = ["simple-chat-app", "tests"]
 extend_skip = ["__init__.py"]
 
 [tool.mypy]
-mypy_path = "project_name"
+mypy_path = "simple-chat-app"
 python_version = "3.12"
 explicit_package_bases = true
 disallow_untyped_defs = true
