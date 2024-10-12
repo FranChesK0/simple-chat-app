@@ -1,0 +1,9 @@
+services:
+  simple-chat:
+    container_name: simple-chat
+    build:
+      context: .
+    ports:
+      - 80:80
+    volumes:
+      - ./db/db.sqlite3:db.sqlite3
