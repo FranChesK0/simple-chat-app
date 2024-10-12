@@ -1,9 +1,10 @@
 # Simple Chat App
 Simple Chat App written in Python
 
-![login](assests/login.png)
-![register](assests/register.png)
-![chat](assests/chat.png)
+![login](assets/login.png)
+![register](assets/register.png)
+![chat](assets/chat.png)
+
 
 # How to run
 ---
