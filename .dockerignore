@@ -24,5 +24,6 @@
 **/obj
 **/secrets.dev.yaml
 **/values.dev.yaml
+**/assets
 LICENSE
 README.md
