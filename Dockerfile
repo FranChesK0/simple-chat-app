@@ -27,4 +27,5 @@ COPY . .
 
 EXPOSE 80
 
+CMD alembic upgrade head
 CMD uvicorn main:app --app-dir=./simple-chat-app/. --host=0.0.0.0 --port=80
